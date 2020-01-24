@@ -27,6 +27,7 @@ export class ProjectsComponent implements OnInit {
 
   selectProject(project: Project) {
     this.selectedProject = project;
+    this.form.patchValue(project)
   }
 
   resetProject() {

@@ -1,12 +1,15 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>
+    <mat-card-title *ngIf="currentProject.id; else elseCreateNew">
       <h1>
         {{ originalTitle }}
       </h1>
     </mat-card-title>
+    <ng-template #elseCreateNew>
+      <h1>Create a New Project</h1>
+    </ng-template>
   </mat-card-header>
-  <form (submit)="save(currentProject)" [formGroup]="form" #formdirective="ngForm" (ngSubmit)="submitForm(formdirective)">
+  <form (submit)="saved.emit(currentProject)" [formGroup]="form" #formdirective="ngForm" (ngSubmit)="submitForm(formdirective)">
     <mat-card-content>
 
       <mat-form-field class="full-width">
