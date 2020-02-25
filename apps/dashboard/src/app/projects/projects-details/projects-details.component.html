@@ -9,7 +9,7 @@
       <h1>Create a New Project</h1>
     </ng-template>
   </mat-card-header>
-  <form (submit)="saved.emit(currentProject)" [formGroup]="form" #formdirective="ngForm" (ngSubmit)="submitForm(formdirective)">
+  <form [formGroup]="form" #formdirective="ngForm" (ngSubmit)="submitForm(formdirective)">
     <mat-card-content>
 
       <mat-form-field class="full-width">

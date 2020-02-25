@@ -4,8 +4,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: '', component: ProjectsComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: '', component: LoginComponent },
   { path: '**', redirectTo: ''},
 ]
 
